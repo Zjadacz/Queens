@@ -1,4 +1,5 @@
-"use strict";
+import { Queen } from "./queen.js";
+import { Board } from "./board.js";
 // Punkt wejścia gry
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
@@ -8,6 +9,8 @@ const player = {
     size: 30,
     speed: 4,
 };
+const board = new Board(10, 10, 60);
+board.queens.push(new Queen({ x: 2, y: 3 }, [{ x: 2, y: 3 }, { x: 2, y: 4 }], "#ff6666"));
 const keys = {};
 window.addEventListener("keydown", (e) => (keys[e.key] = true));
 window.addEventListener("keyup", (e) => (keys[e.key] = false));
@@ -24,8 +27,7 @@ function update() {
     player.y = Math.max(0, Math.min(canvas.height - player.size, player.y));
 }
 function draw() {
-    ctx.fillStyle = "#1e1e2e";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    board.draw(ctx);
     ctx.fillStyle = "#89b4fa";
     ctx.fillRect(player.x, player.y, player.size, player.size);
 }
