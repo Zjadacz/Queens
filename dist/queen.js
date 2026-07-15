@@ -1,13 +1,12 @@
 export class Queen {
-    constructor(location, area, color) {
-        this.location = location;
-        this.area = area;
+    constructor(fields, color) {
+        this.fields = fields;
         this.color = color;
     }
     draw(ctx, cellSize) {
         ctx.fillStyle = this.color;
-        for (const pos of this.area) {
-            ctx.fillRect(pos.x * cellSize + 1, pos.y * cellSize + 1, cellSize - 2, cellSize - 2);
+        for (const field of this.fields) {
+            ctx.fillRect(field.position.x * cellSize + 1, field.position.y * cellSize + 1, cellSize - 2, cellSize - 2);
         }
     }
 }

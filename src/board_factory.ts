@@ -1,0 +1,118 @@
+import { Board } from "./board.js";
+
+export class BoardFactory {
+    create10x10Board(): Board {
+    const board = new Board( 10, 10, 60, "#666666", "#222222");
+
+        board.fields[0][0].type = 0;
+        board.fields[1][0].type = 0;
+        board.fields[2][0].type = 0;
+        board.fields[3][0].type = 0;
+
+        board.fields[0][8].type = 1;
+        board.fields[1][8].type = 1;
+        board.fields[2][8].type = 1;
+        board.fields[0][9].type = 1;
+        board.fields[1][9].type = 1;
+        board.fields[2][9].type = 1;
+
+        board.fields[1][1].type = 2;
+        board.fields[1][2].type = 2;
+        board.fields[1][3].type = 2;
+
+        board.fields[2][1].type = 3;
+        board.fields[2][2].type = 3;
+        board.fields[2][3].type = 3;
+        board.fields[2][4].type = 3;
+        board.fields[2][5].type = 3;
+        board.fields[2][6].type = 3;
+        board.fields[3][1].type = 3;
+        board.fields[3][2].type = 3;
+        board.fields[3][3].type = 3;
+        board.fields[3][4].type = 3;
+        board.fields[3][5].type = 3;
+        board.fields[3][6].type = 3;
+
+        board.fields[4][0].type = 4;
+        board.fields[4][1].type = 4;
+        board.fields[4][2].type = 4;
+        board.fields[4][3].type = 4;
+        board.fields[4][4].type = 4;
+        board.fields[4][5].type = 4;
+
+        board.fields[5][0].type = 5;
+        board.fields[6][0].type = 5;
+        board.fields[7][0].type = 5;
+        board.fields[8][0].type = 5;
+        board.fields[9][0].type = 5;
+        board.fields[6][1].type = 5;
+        board.fields[6][2].type = 5;
+        board.fields[7][2].type = 5;
+
+        board.fields[5][1].type = 6;
+        board.fields[5][2].type = 6;
+        board.fields[5][3].type = 6;
+        board.fields[6][3].type = 6;
+        board.fields[7][3].type = 6;
+        board.fields[8][2].type = 6;
+        board.fields[8][3].type = 6;
+        board.fields[8][4].type = 6;
+
+        board.fields[0][1].type = 7;
+        board.fields[0][2].type = 7;
+        board.fields[0][3].type = 7;
+        board.fields[0][4].type = 7;
+        board.fields[0][5].type = 7;
+        board.fields[0][6].type = 7;
+        board.fields[0][7].type = 7;
+        board.fields[1][4].type = 7;
+        board.fields[1][5].type = 7;
+        board.fields[1][6].type = 7;
+        board.fields[1][7].type = 7;
+        board.fields[2][7].type = 7;
+        board.fields[3][7].type = 7;
+        board.fields[3][8].type = 7;
+        board.fields[3][9].type = 7;
+        board.fields[4][6].type = 7;
+        board.fields[4][7].type = 7;
+        board.fields[4][8].type = 7;
+        board.fields[4][9].type = 7;
+        board.fields[5][4].type = 7;
+        board.fields[5][5].type = 7;
+        board.fields[5][6].type = 7;
+
+        board.fields[7][1].type = 8;
+        board.fields[8][1].type = 8;
+        board.fields[9][1].type = 8;
+        board.fields[9][2].type = 8;
+        board.fields[9][3].type = 8;
+        board.fields[6][4].type = 8;
+        board.fields[7][4].type = 8;
+        board.fields[9][4].type = 8;
+        board.fields[7][5].type = 8;
+        board.fields[8][5].type = 8;
+        board.fields[9][5].type = 8;
+        board.fields[8][6].type = 8;
+        board.fields[8][7].type = 8;
+        board.fields[8][8].type = 8;
+
+        board.fields[6][5].type = 9;
+        board.fields[6][6].type = 9;
+        board.fields[7][6].type = 9;
+        board.fields[9][6].type = 9;
+        board.fields[5][7].type = 9;
+        board.fields[6][7].type = 9;
+        board.fields[7][7].type = 9;
+        board.fields[9][7].type = 9;
+        board.fields[5][8].type = 9;
+        board.fields[6][8].type = 9;
+        board.fields[7][8].type = 9;
+        board.fields[9][8].type = 9;
+        board.fields[5][9].type = 9;
+        board.fields[6][9].type = 9;
+        board.fields[7][9].type = 9;
+        board.fields[8][9].type = 9;
+        board.fields[9][9].type = 9;
+        return board;
+    }
+}
